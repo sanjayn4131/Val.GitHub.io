@@ -1,0 +1,104 @@
+/*
+ * Styling for the Valentine website
+ * Designed to be playful and cute with a Japanese/Korean aesthetic.
+ */
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kalam', cursive;
+  background: linear-gradient(135deg, #ffd9e8 0%, #ffc1d5 50%, #ffa4c2 100%);
+  color: #a0005b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Central container to hold the content */
+.container {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #d44e8d;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Yes button styling */
+#yes {
+  background-color: #ff6b8a;
+  color: #fff;
+}
+
+#yes:hover {
+  background-color: #ff4471;
+  transform: translateY(-2px);
+}
+
+/* No button styling */
+#no {
+  background-color: #ffd5e5;
+  color: #d44e8d;
+  position: relative;
+}
+
+#no:hover {
+  /* a slight bounce on hover for effect */
+  transform: translateY(-2px);
+}
+
+/* Result section (hidden until Yes is clicked) */
+#result {
+  margin-top: 20px;
+}
+
+/* Size of the GIF so it fits nicely on mobile and desktop */
+#result img.gif {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#result p {
+  font-size: 1.2rem;
+  color: #d44e8d;
+}
+
+/* Utility class to hide elements */
+.hidden {
+  display: none;
+}
