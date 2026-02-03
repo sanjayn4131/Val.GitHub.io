@@ -114,6 +114,7 @@ button {
   margin-bottom: 24px;
   /* Center the GIF horizontally and apply similar styling as result images */
   text-align: center;
+  position: relative; /* allow overlay pseudo-element */
 }
 
 /* Ensure the GIF on the home page is nicely sized and centered */
@@ -124,4 +125,23 @@ button {
   display: block;
   margin: 0 auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Ensure the GIF keeps its aspect ratio */
+  height: auto;
+}
+
+/* Overlay at the bottom of the home GIF to hide source credits and icons */
+.home-gif::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 60px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  pointer-events: none;
+  /* Use a soft translucent overlay matching the container's light background */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 100%);
 }
