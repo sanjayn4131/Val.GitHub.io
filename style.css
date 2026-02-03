@@ -138,10 +138,11 @@ button {
   bottom: 0;
   width: 80%;
   max-width: 300px;
-  height: 60px;
+  /* Cover a larger portion at the bottom of the GIF to fully mask any watermark */
+  height: 80px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   pointer-events: none;
-  /* Use a soft translucent overlay matching the container's light background */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 100%);
+  /* Use a stronger translucent overlay so the watermark beneath is no longer visible */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 1) 100%);
 }
