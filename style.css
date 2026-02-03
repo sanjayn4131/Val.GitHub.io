@@ -138,11 +138,11 @@ button {
   bottom: 0;
   width: 80%;
   max-width: 300px;
-  /* Cover an even larger portion at the bottom of the GIF to fully mask any watermark */
-  height: 100px;
+  /* Cover a larger portion at the bottom of the GIF to mask most of the watermark, but keep some visibility */
+  height: 80px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   pointer-events: none;
-  /* Use an opaque overlay matching the card background to completely hide the watermark */
-  background-color: rgba(255, 255, 255, 0.95);
+  /* Use a semi-transparent gradient overlay so the watermark is subtle but not distracting */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 1) 100%);
 }
