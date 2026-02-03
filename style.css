@@ -47,36 +47,42 @@ h1 {
 }
 
 button {
-  font-size: 1.2rem;
-  padding: 12px 26px;
+  /* Give the buttons a slightly larger, playful appearance */
+  font-size: 1.3rem;
+  padding: 14px 32px;
   border: none;
-  border-radius: 50px;
+  border-radius: 40px;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  font-family: 'Kalam', cursive;
+  transition: transform 0.2s ease, background 0.4s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Yes button styling */
 #yes {
-  background-color: #ff6b8a;
-  color: #fff;
+  /* Use a cheerful pink gradient for the Yes button */
+  background: linear-gradient(135deg, #ff8fa3 0%, #ff6b8a 100%);
+  color: #ffffff;
 }
 
 #yes:hover {
-  background-color: #ff4471;
-  transform: translateY(-2px);
+  /* Slightly darken and scale on hover for a playful effect */
+  background: linear-gradient(135deg, #ff7a95 0%, #ff4f70 100%);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* No button styling */
 #no {
-  background-color: #ffd5e5;
+  /* A soft pastel gradient for the No button */
+  background: linear-gradient(135deg, #ffe4ef 0%, #ffccd7 100%);
   color: #d44e8d;
   position: relative;
 }
 
 #no:hover {
-  /* a slight bounce on hover for effect */
-  transform: translateY(-2px);
+  /* a slight bounce and gentle darkening on hover */
+  background: linear-gradient(135deg, #ffd5e5 0%, #ffb3d5 100%);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* Result section (hidden until Yes is clicked) */
@@ -106,4 +112,16 @@ button {
 /* Container for the home GIF */
 .home-gif {
   margin-bottom: 24px;
+  /* Center the GIF horizontally and apply similar styling as result images */
+  text-align: center;
+}
+
+/* Ensure the GIF on the home page is nicely sized and centered */
+.home-gif img.gif {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

@@ -12,10 +12,16 @@ yesBtn.addEventListener('click', () => {
   result.classList.remove('hidden');
   // Hide the buttons so they don't clutter the page anymore
   buttonsContainer.style.display = 'none';
-  // Hide the home GIF so that only the hugging GIF is visible
-  const homeGif = document.getElementById('homeGif');
-  if (homeGif) {
-    homeGif.style.display = 'none';
+  // Hide the home GIF container entirely so the first image disappears
+  const homeContainer = document.querySelector('.home-gif');
+  if (homeContainer) {
+    homeContainer.style.display = 'none';
+  } else {
+    // Fallback: hide the image itself
+    const homeGif = document.getElementById('homeGif');
+    if (homeGif) {
+      homeGif.style.display = 'none';
+    }
   }
 });
 
