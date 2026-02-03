@@ -102,3 +102,8 @@ button {
 .hidden {
   display: none;
 }
+
+/* Container for the home GIF */
+.home-gif {
+  margin-bottom: 24px;
+}

@@ -12,6 +12,11 @@ yesBtn.addEventListener('click', () => {
   result.classList.remove('hidden');
   // Hide the buttons so they don't clutter the page anymore
   buttonsContainer.style.display = 'none';
+  // Hide the home GIF so that only the hugging GIF is visible
+  const homeGif = document.getElementById('homeGif');
+  if (homeGif) {
+    homeGif.style.display = 'none';
+  }
 });
 
 // When the mouse enters the No button, move it to a random position
