@@ -23,11 +23,6 @@ yesBtn.addEventListener('click', () => {
       homeGif.style.display = 'none';
     }
   }
-  // Also hide the photo slider so it doesn't overlap the result
-  const photoSlider = document.querySelector('.photo-slider');
-  if (photoSlider) {
-    photoSlider.style.display = 'none';
-  }
 });
 
 // When the mouse enters the No button, move it to a random position

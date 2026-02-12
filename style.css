@@ -15,11 +15,8 @@ body {
   background: linear-gradient(135deg, #ffd9e8 0%, #ffc1d5 50%, #ffa4c2 100%);
   color: #a0005b;
   min-height: 100vh;
-  /* Use a column layout so the photo slider and main container stack vertically */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  /* Center the content vertically within the viewport */
   justify-content: center;
   padding: 20px;
 }
@@ -156,47 +153,4 @@ button {
   font-weight: 700;
   color: #d44e8d;
   margin-bottom: 16px;
-}
-
-/*
- * Photo slider
- * Displays your uploaded couple photos in a continuous carousel across the top
- */
-.photo-slider {
-  overflow: hidden;
-  width: 100%;
-  /* Center within the page width and add space below */
-  margin: 0 auto 24px;
-  /* Reserve enough space for the images */
-  height: 90px;
-  /* Ensure the slider appears above the main container (which is positioned) */
-  position: relative;
-  z-index: 2;
-  /* Temporary debug styles to visualise the slider area */
-}
-
-.photo-track {
-  display: flex;
-  /* Animate the track so it scrolls from right to left continuously */
-  animation: scroll 40s linear infinite;
-}
-
-.photo-track img.photo {
-  height: 80px;
-  width: 80px;
-  margin-right: 16px;
-  border: 3px solid #ffffff;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    /* Move left by half of the track width; because the set is duplicated, this creates an infinite loop */
-    transform: translateX(-50%);
-  }
 }
